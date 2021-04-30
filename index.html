@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UNIVESP - Simulador para EPS Cubesat</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/text.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="introducao" class="row info active bg-stars">
+        <header class="col-md-12">
+          <h1 class="text-center mt-5">
+            Simulação de parâmetros solares para EPS Cubesat
+          </h1>
+        </header>
+
+        <section class="col-md-6">
+          <h2>Introdução</h2>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              1) Os cálculos são feitos com base na altitude de órbita circular
+            </li>
+            <li class="list-group-item">
+              2) Serão utilizadas algumas fórmulas do capítulo de metodologia para 
+              apresentação dos resultados
+            </li>
+            <li class="list-group-item">3) Os resultados serão apresentados ao final da página</li>
+            </li>
+          </ul>
+        </section>
+
+        <section class="col-md-6">
+          <h2>Instruções - como utilizar</h2>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              1) Insira o parâmetro altitude de órbita circular
+            </li>
+            <li class="list-group-item">
+              2) O sistema te dará uma slider com controle exatamente dentro do
+              range estabelecido, com uma simulação virtual do que está
+              ocorrendo, valores e visualização por imagem
+            </li>
+            <li class="list-group-item">
+              3) A partir desse controle você pode alterar o valor e ver todos
+              os outros parâmetros variando
+            </li>
+          </ul>
+        </section>
+
+        <section class="col-md-12 text-center">
+          <button id="go" class="btn btn-outline-warning btn-lg">
+            Vamos começar?
+          </button>
+        </section>
+      </section>
+
+      <section id="napratica" class="row info bg-stars">
+        <header class="col-md-12">
+          <h1 class="text-center mt-5">Na prática!</h1>
+        </header>
+
+        <section class="col-md-4">
+          <form>
+
+            <div class="row">
+              <div class="col form-group">
+                <input
+                  type="text"
+                  id="altitude"
+                  class="form-control"
+                  placeholder="Altitude de órbita circular (km)"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col form-group">
+                <label>Controle dinâmico altitude de órbita</label>
+
+                <input
+                  id="altitudeSlider"
+                  type="range"
+                  step="1"
+                  max="2000"
+                  class="form-control"
+                  placeholder="Controlar altitude de órbita circular"
+                />
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="animacao" class="col-md-8">
+          <div id="planeta">
+            <img src="images/planeta.jpg" alt="Planeta" />
+          </div>
+        </section>
+      </section>
+
+      <section id="resultados" class="row info bg-stars">
+        <header class="col-md-12">
+          <h1 class="text-center mt-5">Resultados</h1>
+        </header>
+
+        <section class="col-md-4">
+          <canvas id="myChart" width="300" height="300"></canvas>
+        </section>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="scripts/paging.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"
+    ></script>
+    <script type="text/javascript" src="scripts/chart.js"></script>
+    <script type="text/javascript" src="scripts/simulator.js"></script>
+  </body>
+</html>

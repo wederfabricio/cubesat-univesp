@@ -1,0 +1,89 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 10px;
+}
+
+h1 {
+  color: rgb(30, 144, 255);
+}
+
+h2 {
+  color: #ffc107;
+}
+
+main.container {
+  max-width: 100%;
+}
+
+.bg-stars {
+  background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  background-position: 0px;
+  animation-duration: 100s;
+  animation-name: stars;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes stars {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 2000px 2000px;
+  }
+}
+
+#napratica {
+  padding-bottom: 10px;
+  color: white;
+  height: auto !important;
+}
+
+#planeta {
+  z-index: 1;
+}
+
+#planeta img {
+  z-index: 1;
+  width: 100%;
+  max-height: 100%;
+  opacity: 0.5;
+}
+
+#resultados {
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  main > section {
+    height: 100vh !important;
+  }
+}
+
+section .info ul li {
+  list-style: decimal;
+}
+
+section.info section {
+  margin-top: 30px;
+}
+
+#animacao {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+#fundo {
+  display: block;
+  top: 0;
+  left: 20px;
+  position: absolute;
+  height: 100%;
+  width: 18%;
+  z-index: -9;
+}
