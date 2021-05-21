@@ -24,10 +24,27 @@
     <main class="container">
       <section id="introducao" class="row info active bg-stars">
         <header class="col-md-12">
-          <h1 class="text-center mt-5">
-            Simulação de parâmetros solares para EPS Cubesat
-          </h1>
+          <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <img height="100" src="https://ava.univesp.br/branding/_1_1/loginLogo/CustomLoginLogo.png" alt="Logo UNIVESP" />
+            </div>
+            <div class="col-md-6">
+              <h1 class="text-center mt-5">
+                Simulação de parâmetros solares para EPS Cubesat
+              </h1>
+              <h6 class="text-center text-white">
+                Trabalho de conclusão de curso (TCC)
+                <br>
+                Alessandro Ferreira de Santiago
+                <br>
+                Maria Cristina Tessari-Zampieri
+                <br>
+                Weder Fabricio Lopes
+              </h6>
+            </div>
+          </div>
         </header>
+        
 
         <section class="col-md-6">
           <h2>Introdução</h2>
@@ -63,12 +80,6 @@
             </li>
           </ul>
         </section>
-
-        <section class="col-md-12 text-center">
-          <button id="go" class="btn btn-outline-warning btn-lg">
-            Vamos começar?
-          </button>
-        </section>
       </section>
 
       <section id="napratica" class="row info bg-stars">
@@ -92,13 +103,12 @@
 
             <div class="row">
               <div class="col form-group">
-                <label>Controle dinâmico altitude de órbita</label>
+                <label>Controle dinâmico altitude de órbita - LEO (km)</label>
 
                 <input
                   id="altitudeSlider"
                   type="range"
                   step="1"
-                  max="2000"
                   class="form-control"
                   placeholder="Controlar altitude de órbita circular"
                 />
@@ -109,6 +119,7 @@
 
         <section id="animacao" class="col-md-8">
           <div id="planeta">
+            <div id="cubesat"></div>
             <img src="images/planeta.jpg" alt="Planeta" />
           </div>
         </section>
@@ -119,8 +130,37 @@
           <h1 class="text-center mt-5">Resultados</h1>
         </header>
 
-        <section class="col-md-4">
+        <section class="col-md-6">
           <canvas id="myChart" width="300" height="300"></canvas>
+        </section>
+
+        <section class="col-md-6">
+          <table class="w-100">
+            <tr>
+              <th>Altitude do satélite informada</th>
+              <td><span id="altitudeSatelite">0</span></td>
+            </tr>
+            <tr>
+              <th>Semi-eixo maior da órbita do satelite</th>
+              <td><span id="semiEixoMaior">0</span></td>
+            </tr>
+            <tr>
+              <th>Período orbital</th>
+              <td><span id="periodoOrbital">0</span></td>
+            </tr>
+            <tr>
+              <th>Velocidade angular</th>
+              <td><span id="velocidadeAngular">0</span></td>
+            </tr>
+            <tr>
+              <th>Inclinação orbital</th>
+              <td><span id="inclinacaoOrbital">0</span></td>
+            </tr>
+            <tr>
+              <th>Porcentagem de exposição sob luz solar</th>
+              <td><span id="exposicaoLuz">0</span></td>
+            </tr>
+          </table>
         </section>
       </section>
     </main>
@@ -130,7 +170,6 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="scripts/paging.js"></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"

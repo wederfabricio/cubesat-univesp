@@ -43,6 +43,43 @@ main.container {
   height: auto !important;
 }
 
+#cubesat {
+  z-index: 2;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #dd1616;
+  top: 20%;
+  left: 59%;
+  border-radius: 100%;
+
+  transition: all 1s linear;
+
+  animation-duration: 3s;
+  animation-name: cubesat;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cubesat {
+  0% {
+    box-shadow: 0px 0px 0px red;
+  }
+  100% {
+    box-shadow: 0px 0px 500px red;
+  }
+}
+
+#cubesat::after {
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  display: block;
+  content: "Cubesat";
+  transform: rotate(-30deg);
+}
+
 #planeta {
   z-index: 1;
 }
@@ -60,7 +97,7 @@ main.container {
 
 @media screen and (min-width: 1024px) {
   main > section {
-    height: 100vh !important;
+    min-height: 100vh !important;
   }
 }
 
@@ -86,4 +123,18 @@ section.info section {
   height: 100%;
   width: 18%;
   z-index: -9;
+}
+
+table td {
+  padding-left: 30px;
+}
+
+table tr {
+  border-bottom: 1px solid white;
+}
+
+#myChart {
+  margin: auto;
+  max-width: 400px;
+  max-height: 400px;
 }
