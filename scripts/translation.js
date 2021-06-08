@@ -19,7 +19,7 @@ const translations = [
   {
     key: "TEXTO_TCC",
     pt: "Trabalho de conclusão de curso (TCC)",
-    en: "Course Completion Work",
+    en: "Final paper",
   },
   {
     key: "TEXTO_INTRODUCAO",
