@@ -19,8 +19,7 @@ main.container {
 }
 
 .bg-stars {
-  background: black
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  background: black url(../images/stars.png) repeat;
   background-position: 0px;
   animation-duration: 100s;
   animation-name: stars;
@@ -48,10 +47,12 @@ main.container {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #dd1616;
+  background-color: #dd1616a0;
+  border: 1px solid #dd1616;
   top: 20%;
   left: 59%;
-  border-radius: 100%;
+  border-radius: 10%;
+  transform: rotate(-45deg);
 
   transition: all 1s linear;
 
@@ -73,11 +74,11 @@ main.container {
 
 #cubesat::after {
   position: absolute;
-  top: 25px;
-  left: -5px;
+  top: 30px;
+  left: -15px;
   display: block;
   content: "Cubesat";
-  transform: rotate(-30deg);
+  transform: rotate(-3deg);
 }
 
 #planeta {
@@ -103,10 +104,6 @@ main.container {
 
 section .info ul li {
   list-style: decimal;
-}
-
-section.info section {
-  margin-top: 30px;
 }
 
 #animacao {

@@ -116,6 +116,16 @@ const translations = [
     pt: "Tempo em luz solar",
     en: "Time without sunlight",
   },
+  {
+    key: "ENTRE_CONTATO",
+    pt: "Entre em contato conosco pelo Instagram",
+    en: "Contact us via Instagram"
+  },
+  {
+    key: "RESULTADOS_CONTATO",
+    pt: "Compartilhe sugestões ou resultados conosco",
+    en: "Share your suggestions or results with us"
+  }  
 ];
 
 function translate(key) {

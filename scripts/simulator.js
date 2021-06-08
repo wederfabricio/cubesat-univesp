@@ -19,14 +19,15 @@ var parametrosIniciais = {
   max: 2000,
 };
 // Inserir limite para não permitir cubesat exceder bordas
-var limitBorder = 100;
+var limitBorderLeft = 100;
+var limitBorderTop = 10;
 var animacaoState = {
   left: animacaoSection.offset().left,
   top: animacaoSection.offset().top,
 };
 var animacaoLimits = {
-  left: animacaoSection.width() - limitBorder,
-  top: cubesat.offset().top - animacaoState.top,
+  left: animacaoSection.width() - limitBorderLeft,
+  top: cubesat.offset().top - animacaoState.top - limitBorderTop,
 };
 var cubesatState = {
   left: cubesat.offset().left - animacaoState.left,
