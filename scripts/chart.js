@@ -3,7 +3,7 @@ var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: "pie",
   data: {
-    labels: ["Tempo em luz solar", "Tempo sem luz solar"],
+    labels: [translate("GRAFICO_LUZ"), translate("GRAFICO_SEM_LUZ")],
     datasets: [
       {
         data: [0, 0],
@@ -19,5 +19,13 @@ var myChart = new Chart(ctx, {
 
 function editChart(data) {
   myChart.data.datasets[0].data = data;
+  myChart.update();
+}
+
+function updateChartLanguage() {
+  myChart.data.labels = [
+    translate("GRAFICO_LUZ"),
+    translate("GRAFICO_SEM_LUZ"),
+  ];
   myChart.update();
 }

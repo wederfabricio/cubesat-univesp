@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UNIVESP - Simulador para EPS Cubesat</title>
+    <title>UNIVESP - Simulador para parâmetros orbitais EPS Cubesat</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -25,56 +25,98 @@
       <section id="introducao" class="row info active bg-stars">
         <header class="col-md-12">
           <div class="row">
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-              <img height="100" src="https://ava.univesp.br/branding/_1_1/loginLogo/CustomLoginLogo.png" alt="Logo UNIVESP" />
+            <div
+              class="
+                col-md-6
+                d-flex
+                justify-content-center
+                align-items-center
+                flex-column
+              "
+            >
+              <img
+                height="100"
+                src="https://ava.univesp.br/branding/_1_1/loginLogo/CustomLoginLogo.png"
+                alt="Logo UNIVESP"
+              />
+              <a
+                class="
+                  d-flex
+                  text-white
+                  align-items-center
+                  text-decoration-none
+                "
+                href="https://www.instagram.com/cubesat.univesp/"
+                target="_blank"
+              >
+                <i class="fa fa-instagram fa-3x"></i>
+                <span class="ml-3">@cubesat</span>
+              </a>
+              <a
+                href="#"
+                class="
+                  d-flex
+                  text-white
+                  align-items-center
+                  text-decoration-none
+                "
+                onclick="toggleLanguage()"
+              >
+                <i class="fa fa-globe fa-3x"></i>
+                <span data-translate="ALTERAR_IDIOMA" class="ml-3"
+                  >Change language to EN</span
+                >
+              </a>
             </div>
             <div class="col-md-6">
-              <h1 class="text-center mt-5">
-                Simulação de parâmetros solares para EPS Cubesat
+              <h1 class="text-center mt-5" data-translate="SIMULADOR_TITULO">
+                Simulação de parâmetros orbitais para EPS Cubesat
               </h1>
               <h6 class="text-center text-white">
-                Trabalho de conclusão de curso (TCC)
-                <br>
+                <span data-translate="TEXTO_TCC"
+                  >Trabalho de conclusão de curso (TCC)</span
+                >
+                <br />
                 Alessandro Ferreira de Santiago
-                <br>
+                <br />
                 Maria Cristina Tessari-Zampieri
-                <br>
+                <br />
                 Weder Fabricio Lopes
               </h6>
             </div>
           </div>
         </header>
-        
 
         <section class="col-md-6">
-          <h2>Introdução</h2>
+          <h2 data-translate="TEXTO_INTRODUCAO">Introdução</h2>
 
           <ul class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item" data-translate="TEXTO_INTRODUCAO_1">
               1) Os cálculos são feitos com base na altitude de órbita circular
             </li>
-            <li class="list-group-item">
-              2) Serão utilizadas algumas fórmulas do capítulo de metodologia para 
-              apresentação dos resultados
+            <li class="list-group-item" data-translate="TEXTO_INTRODUCAO_2">
+              2) Serão utilizadas algumas fórmulas do capítulo de metodologia
+              para apresentação dos resultados
             </li>
-            <li class="list-group-item">3) Os resultados serão apresentados ao final da página</li>
+            <li class="list-group-item" data-translate="TEXTO_INTRODUCAO_3">
+              3) Os resultados serão apresentados ao final da página
             </li>
           </ul>
         </section>
 
         <section class="col-md-6">
-          <h2>Instruções - como utilizar</h2>
+          <h2 data-translate="TEXTO_INSTRUCAO">Instruções - como utilizar</h2>
 
           <ul class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item" data-translate="TEXTO_INSTRUCAO_1">
               1) Insira o parâmetro altitude de órbita circular
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item" data-translate="TEXTO_INSTRUCAO_2">
               2) O sistema te dará uma slider com controle exatamente dentro do
               range estabelecido, com uma simulação virtual do que está
               ocorrendo, valores e visualização por imagem
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item" data-translate="TEXTO_INSTRUCAO_3">
               3) A partir desse controle você pode alterar o valor e ver todos
               os outros parâmetros variando
             </li>
@@ -84,12 +126,13 @@
 
       <section id="napratica" class="row info bg-stars">
         <header class="col-md-12">
-          <h1 class="text-center mt-5">Na prática!</h1>
+          <h1 class="text-center mt-5" data-translate="TEXTO_PRATICA">
+            Na prática!
+          </h1>
         </header>
 
         <section class="col-md-4">
           <form>
-
             <div class="row">
               <div class="col form-group">
                 <input
@@ -103,7 +146,9 @@
 
             <div class="row">
               <div class="col form-group">
-                <label>Controle dinâmico altitude de órbita - LEO (km)</label>
+                <label data-translate="CONTROLE_ALTITUDE"
+                  >Controle dinâmico altitude de órbita - LEO (km)</label
+                >
 
                 <input
                   id="altitudeSlider"
@@ -127,7 +172,9 @@
 
       <section id="resultados" class="row info bg-stars">
         <header class="col-md-12">
-          <h1 class="text-center mt-5">Resultados</h1>
+          <h1 class="text-center mt-5" data-translate="TEXTO_RESULTADO">
+            Resultados
+          </h1>
         </header>
 
         <section class="col-md-6">
@@ -137,27 +184,33 @@
         <section class="col-md-6">
           <table class="w-100">
             <tr>
-              <th>Altitude do satélite informada</th>
+              <th data-translate="ALTITUDE_SATELITE">
+                Altitude do satélite informada
+              </th>
               <td><span id="altitudeSatelite">0</span></td>
             </tr>
             <tr>
-              <th>Semi-eixo maior da órbita do satelite</th>
+              <th data-translate="SEMIEIXO_MAIOR">
+                Semi-eixo maior da órbita do satelite
+              </th>
               <td><span id="semiEixoMaior">0</span></td>
             </tr>
             <tr>
-              <th>Período orbital</th>
+              <th data-translate="PERIODO_ORBITAL">Período orbital</th>
               <td><span id="periodoOrbital">0</span></td>
             </tr>
             <tr>
-              <th>Velocidade angular</th>
+              <th data-translate="VELOCIDADE_ANGULAR">Velocidade angular</th>
               <td><span id="velocidadeAngular">0</span></td>
             </tr>
             <tr>
-              <th>Inclinação orbital</th>
+              <th data-translate="INCLINACAO_ORBITAL">Inclinação orbital</th>
               <td><span id="inclinacaoOrbital">0</span></td>
             </tr>
             <tr>
-              <th>Porcentagem de exposição sob luz solar</th>
+              <th data-translate="PORCENTAGEM_EXPOSICAO">
+                Porcentagem de exposição sob luz solar
+              </th>
               <td><span id="exposicaoLuz">0</span></td>
             </tr>
           </table>
@@ -174,6 +227,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"
     ></script>
+    <script type="text/javascript" src="scripts/translation.js"></script>
     <script type="text/javascript" src="scripts/chart.js"></script>
     <script type="text/javascript" src="scripts/simulator.js"></script>
   </body>
